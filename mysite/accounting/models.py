@@ -147,6 +147,7 @@ class Transaction(models.Model):
     issue = models.ForeignKey(Issue, on_delete=models.CASCADE)
     amount = models.FloatField()
     amount_in_word = models.CharField(max_length=200, null=True, blank=True)
+    date = models.DateTimeField(null=True, blank=True)
     status = models.CharField(max_length=200, choices=STATUS_CHOICES)
 
     def __str__(self):
